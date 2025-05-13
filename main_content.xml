@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="@drawable/bgw1"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_margin="0dp"
+        android:layout_height="60dp">
+        <include
+            layout="@layout/toolbar"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to ACUTE Translator"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:background="@drawable/welcome_bg"
+        android:padding="16dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:layout_marginTop="180dp"
+        android:letterSpacing="0.05"
+        android:elevation="8dp"
+        android:shadowColor="#80000000"
+        android:shadowDx="2"
+        android:shadowDy="2"
+        android:shadowRadius="4"/>
+
+
+  <Button
+      android:id="@+id/tranBtn"
+      android:layout_width="200dp"
+      android:layout_height="wrap_content"
+      android:text="ACUTE Translator"
+      android:layout_marginTop="140dp"
+      android:backgroundTint="#9A54A6"
+      android:layout_gravity="center"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2025 jja App. All rights reserved."
+        android:gravity="center"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:padding="8dp" />
+
+</LinearLayout>

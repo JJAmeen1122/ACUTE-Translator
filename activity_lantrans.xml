@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/bg11"
+    android:padding="16dp"
+    tools:context=".lantrans">
+   <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="ACUTE Translator"
+       android:gravity="center"
+       android:background="#9A54A6"
+       android:textColor="#FFFFFF"
+       android:textSize="24sp"
+       android:textStyle="bold"
+       android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <Spinner
+            android:id="@+id/idFromSpiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:id="@+id/rightArrow"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/arrow_desc"
+            android:src="@drawable/arrow"
+            app:tint="@color/black" />
+
+        <Spinner
+            android:id="@+id/idToSpiner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:backgroundTint="@color/black"
+            android:gravity="center"
+            android:minHeight="48dp"
+            android:spinnerMode="dropdown" />
+    </LinearLayout>
+
+    <!-- Text Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:hint="@string/source_text_hint"
+        app:boxStrokeColor="@color/black"
+        app:hintTextColor="@color/black"
+        app:placeholderText="@string/source_text_hint">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/idEditSource"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="top"
+            android:imeOptions="actionDone"
+            android:inputType="textCapSentences|textMultiLine"
+            android:maxLines="5"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            tools:ignore="VisualLintTextFieldSize" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Voice Input -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/or"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/Mic"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/mic_desc"
+        android:src="@drawable/mic"
+        app:tint="#C57CF3" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:text="@string/say_something"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="14sp" />
+
+    <!-- Translate Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/TranslateBtn"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginBottom="24dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="@string/translate"
+        app:backgroundTint="@color/white"
+        app:rippleColor="#E659E6"
+        app:strokeColor="#C57CF3"
+        app:strokeWidth="1dp"
+        tools:ignore="VisualLintButtonSize" />
+
+    <!-- Translation Result -->
+    <TextView
+        android:id="@+id/TranslatedV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:minHeight="120dp"
+        android:padding="16dp"
+        android:text="@string/translated_text"
+        android:textAlignment="center"
+        android:textColor="#C57CF3"
+        android:textSize="16sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="© 2025 jja App. All rights reserved."
+        android:gravity="center"
+        android:textColor="#666666"
+        android:textSize="12sp"
+        android:padding="8dp" />
+
+
+</LinearLayout>
